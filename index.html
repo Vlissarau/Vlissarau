@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <section>
+            <h1>College Hunter</h1>
+            <div class="search-wrap">
+                <input type="search" placeholder="Enter University name to search" / id="search-box">
+                <button type="submit" onclick="showResults()">Search</button>
+            </div>
+            <div class="authors-wrap">
+                <ul class="filters">
+                    <li>
+                        <span>On-Campus Housing</span>
+                        <fieldset>
+                            <div>
+                                <input type="checkbox" name="acs" value="Yes" id="1"><label for="ger">Yes</label></input>  
+                            </div>   
+                            <div>
+                                <input type="checkbox" name="acs" value="No" id="2"><label for="tur">No</label></input>
+                            </div>      
+                        </fieldset>  
+                    </li>
+                    <li>
+                        <button type="submit" onclick="filter()"> Search </button>
+                    </li>
+                </ul>
+            <h2>Result</h2>
+            <table id="id01">
+               <tr>
+                 <th>University</th>
+                 <th>State</th>
+                 <th>On-Campus Housing</th>
+               </tr>
+              <tr w3-repeat="Universities">
+                <td>{{name}}</td>
+                <td>{{state}}</td>
+                <td>{{housing}}</td>
+              </tr>
+            </table>
+               
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
